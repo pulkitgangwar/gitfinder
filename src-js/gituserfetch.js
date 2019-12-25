@@ -34,7 +34,7 @@ export default function gitFinder() {
       </h3>
   
       <h3 class="heading-tertiary popup__result--url">
-                URL: <a href="#" class="result__url">${response.data.url}</a>
+                URL: <a href="#" class="result__url">${response.data.html_url}</a>
       </h3>
           `;
 
