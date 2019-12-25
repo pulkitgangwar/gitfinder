@@ -34,7 +34,7 @@ export default function gitFinder() {
       </h3>
   
       <h3 class="heading-tertiary popup__result--url">
-                URL: <a href="#" class="result__url">${response.data.html_url}</a>
+                URL: <a href="#" class="result__url" target="_blank">${response.data.html_url}</a>
       </h3>
           `;
 
@@ -43,6 +43,10 @@ export default function gitFinder() {
   }
 
   btn.addEventListener("click", function() {
+    if (input.value === "") {
+      return;
+    }
+
     getData();
 
     if (popup.style.display === "block") {
@@ -52,6 +56,13 @@ export default function gitFinder() {
     }
 
     input.value = "";
+
+    setTimeout(() => {
+      const resultURL = document.querySelector(".result__url");
+
+      resultURL.href = "";
+      resultURL.href = resultURL.innerHTML;
+    }, 2000);
   });
 
   close.addEventListener("click", function() {
