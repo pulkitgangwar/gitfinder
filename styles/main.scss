@@ -9,7 +9,7 @@ $color-green-yellow: yellowgreen;
 
 $bp-largest: 46.875em; // 750px
 $bp-large: 33.75em; //540px
-$bp-medium:25em; //400px
+$bp-medium: 25em; //400px
 
 * {
   padding: 0;
@@ -37,8 +37,8 @@ body {
   font-weight: 600;
   color: $color-white;
 
-  @media only screen and (max-width:$bp-medium){
-    font-size:5rem;
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 5rem;
   }
 
   &--green {
