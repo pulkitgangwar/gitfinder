@@ -142,7 +142,7 @@ body {
 .search__btn:hover {
   background-color: white;
   border: 5px solid white;
-  color: greenyellow;
+  color: yellowgreen;
 }
 
 .result {
@@ -151,6 +151,14 @@ body {
 
 .result__url {
   color: yellowgreen;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+}
+
+.result__url:hover {
+  background-color: yellowgreen;
+  text-decoration: none;
+  color: white;
 }
 
 @-webkit-keyframes pop {

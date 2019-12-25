@@ -3,6 +3,7 @@
 $color-white: white;
 $color-black: black;
 $color-grey: grey;
+$color-green-yellow: yellowgreen;
 
 * {
   padding: 0;
@@ -124,16 +125,23 @@ body {
     &:hover {
       background-color: $color-white;
       border: 5px solid $color-white;
-      color: greenyellow;
+      color: $color-green-yellow;
     }
   }
 }
 
 .result {
-  color: yellowgreen;
+  color: $color-green-yellow;
 
   &__url {
-    color: yellowgreen;
+    color: $color-green-yellow;
+    transition: 0.2s ease-in-out all;
+
+    &:hover {
+      background-color: $color-green-yellow;
+      text-decoration: none;
+      color: $color-white;
+    }
   }
 }
 
