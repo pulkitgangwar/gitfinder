@@ -9,6 +9,46 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:300,600,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
-  <body></body>
+  <body>
+    <div id="particle" class="particles">
+      <div class="particles__container">
+        <h1 class="heading-primary">GitFinder</h1>
+        <div class="search">
+          <input
+            type="text"
+            placeholder="Enter Name or Username"
+            class="search__input"
+          />
+          <a href="#" class="search__btn">Search</a>
+        </div>
+
+        <div class="popup">
+          <div class="popup__close">&times;</div>
+          <div class="popup__result">
+            <!-- <h3 class="heading-tertiary popup__result--name">
+              Name: <span class="result">Shaswat Saxena</span>
+            </h3>
+
+            <h3 class="heading-tertiary popup__result--username">
+              Username: <span class="result">shaswatsaxena</span>
+            </h3>
+
+            <h3 class="heading-tertiary popup__result--repos">
+              Repos: <span class="result">25</span>
+            </h3>
+
+            <h3 class="heading-tertiary popup__result--url">
+              URL:
+              <a href="#" class="result__url"
+                >https://github.com/shaswatsaxena</a
+              >
+            </h3> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./dist/main.js"></script>
+  </body>
 </html>
