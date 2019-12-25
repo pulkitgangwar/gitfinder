@@ -22,6 +22,10 @@ body {
   color: white;
 }
 
+.heading-primary--green {
+  color: yellowgreen;
+}
+
 .heading-tertiary {
   font-size: 3rem;
   font-weight: 400;

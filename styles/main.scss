@@ -26,6 +26,10 @@ body {
   font-size: 10rem;
   font-weight: 600;
   color: $color-white;
+
+  &--green {
+    color: $color-green-yellow;
+  }
 }
 
 .heading-tertiary {
