@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
+    "dotenv-webpack": "^1.7.0",
     "particles.js": "^2.0.0"
   }
 }
