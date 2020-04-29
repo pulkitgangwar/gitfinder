@@ -1,9 +1,24 @@
 import React, { useState } from "react";
 
-const GitForm = () => {
+const GitForm = ({ getUserName }) => {
   const [value, setValue] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!value) {
+      setError("Please enter a Name");
+      return;
+    }
+
+    setError("");
+    getUserName(value);
+    return;
+  };
+
   return (
-    <form className="hero__form form">
+    <form className="hero__form form" onSubmit={handleSubmit}>
+      {error && <p>{error}</p>}
       <input
         className="hero__form--input form__input form__input--value"
         value={value}
