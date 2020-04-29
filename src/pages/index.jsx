@@ -1,8 +1,8 @@
 // importing components
-import Home from "../components/Home";
+import Hero from "../components/Hero";
 
 const Index = () => {
-  return <Home />;
+  return <Hero />;
 };
 
 export default Index;

@@ -3,13 +3,16 @@ import React from "react";
 // importing components
 import GitForm from "./GitForm";
 
-const Home = () => {
+const Hero = () => {
   return (
     <div className="hero">
-      <h1 className="hero__heading">GitFinder</h1>
+      <div className="hero__heading--wrapper">
+        <h1 className="hero__heading">GitFinder</h1>
+      </div>
+
       <GitForm />
     </div>
   );
 };
 
-export default Home;
+export default Hero;

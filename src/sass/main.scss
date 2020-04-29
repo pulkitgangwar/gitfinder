@@ -1,2 +1,8 @@
 // @base
+@import "./base/variables";
 @import "./base/base";
+
+// @components
+@import "./components/btn";
+@import "./components/form";
+@import "./components/hero";
