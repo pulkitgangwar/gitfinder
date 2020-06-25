@@ -1,5 +1,8 @@
+// importing components
+import Home from "../components/Home";
+
 const Index = () => {
-  return <h2>Initial commit </h2>;
+  return <Home />;
 };
 
 export default Index;
