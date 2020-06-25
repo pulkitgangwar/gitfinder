@@ -1,8 +1,5 @@
-// importing components
-import Hero from "../components/Hero";
-
 const Index = () => {
-  return <Hero />;
+  return <h2>Initial commit </h2>;
 };
 
 export default Index;
