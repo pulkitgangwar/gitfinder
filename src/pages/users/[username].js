@@ -1,14 +1,14 @@
 import axios from "axios";
 
 // importing components
-import UserDetails from "../../components/UserDetails";
+import UserRepos from "../../components/UserRepos";
 
 const User = ({ data }) => {
   if (!data) {
     return <h1>Not Found</h1>;
   }
 
-  return <UserDetails data={data} />;
+  return <UserRepos data={data} />;
 };
 
 export const getServerSideProps = async (context) => {
