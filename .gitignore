@@ -1,12 +1,10 @@
 node_modules
-.env
 package-lock.json
 
 
 .next
 .now
-.gitignore
-.env
-.env-development
-.env-production
+.env.local
+.env.development.local
+.env.production.local
 next.config.js
