@@ -15,9 +15,16 @@ export const getServerSideProps = async (context) => {
   const username = context.params.username;
 
   try {
-    const { data } = await axios.get(
-      `https://api.github.com/users/${username}?client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}`
-    );
+    const [{ data }, response] = await Promise.all([
+      axios.get(
+        `https://api.github.com/users/${username}?client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}`
+      ),
+      axios.get(
+        `https://api.github.com/users/${username}/repos?client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}`
+      ),
+    ]);
+
+    data.respositories = response.data;
 
     return {
       props: {
