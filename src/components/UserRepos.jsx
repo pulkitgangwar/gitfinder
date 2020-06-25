@@ -4,9 +4,9 @@ const UserRepos = ({ data }) => {
   return (
     <div className="userrepos">
       <div className="userrepos__grid">
-        {data.respositories.map((singleRepo) => {
+        {data.respositories.map((singleRepo, index) => {
           return (
-            <div className="userrepos__repo">
+            <div key={`UserRepos ${index}`} className="userrepos__repo">
               <div className="userrepos__repo__name">
                 <a
                   href={singleRepo.html_url}
