@@ -1,9 +1,16 @@
 import axios from "axios";
+import { useRouter } from "next/router";
 
 // importing components
 import Users from "../../components/Users";
 
 const User = ({ data }) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div>Loading ....</div>;
+  }
+
   if (!data) {
     return <h1>Not Found</h1>;
   }
@@ -11,7 +18,14 @@ const User = ({ data }) => {
   return <Users data={data} />;
 };
 
-export const getServerSideProps = async (context) => {
+export const getStaticPaths = () => {
+  return {
+    paths: [],
+    fallback: true,
+  };
+};
+
+export const getStaticProps = async (context) => {
   const username = context.params.username;
 
   try {
